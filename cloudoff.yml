@@ -1,0 +1,60 @@
+# ~/.tmuxinator/cloudoff.yml
+
+name: cloudoff
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daeoffs etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t cloudoff
+
+windows:
+  - compute:
+      layout: even-vertical
+      panes:
+        - compute01:
+            - ssh rlaney@10.0.23.10
+            - sudo shutdown -h now
+            - x
+        - compute02:
+            - ssh rlaney@10.0.23.20
+            - sudo shutdown -h now
+            - x
+        - compute03:
+            - ssh rlaney@10.0.23.30
+            - sudo shutdown -h now
+            - x
+  - ContNetBlock:
+      layout: even-vertical
+      panes:
+        - controller01:
+            - ssh rlaney@10.0.23.40
+            - sudo shutdown -h now
+            - x
+        - network01:
+            - ssh rlaney@10.0.23.60
+            - sudo shutdown -h now
+            - x
+        - block01:
+            - ssh rlaney@10.0.23.50
+            - sudo shutdown -h now
+            - x

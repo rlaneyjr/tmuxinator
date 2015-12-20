@@ -31,8 +31,6 @@ windows:
   - compute:
       layout: even-vertical
       panes:
-        - compute01:
-            - ssh rlaney@10.0.23.10
         - compute02:
             - ssh rlaney@10.0.23.20
         - compute03:

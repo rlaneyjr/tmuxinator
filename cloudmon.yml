@@ -32,22 +32,29 @@ windows:
       layout: even-vertical
       panes:
         - compute02:
-            - ssh rlaney@10.0.23.20
+            - ssh compute02
         - compute03:
-            - ssh rlaney@10.0.23.30
+            - ssh compute03
   - controller01:
       layout: even-horizontal
       panes:
         - controller01:
-            - ssh rlaney@10.0.23.40
+            - ssh controller01
         - network01:
-            - ssh rlaney@10.0.23.60
+            - ssh network01
   - store&switch:
       layout: main-horizontal
       panes:
         - block01:
-            - ssh rlaney@10.0.23.50
+            - ssh block01
         - switch01:
-            - ssh rlaney@10.0.22.1
+            - ssh sw1
         - switch02:
-            - ssh rlaney@10.0.23.1
+            - ssh sw2
+  - virl-ns2:
+      layout: even-vertical
+      panes:
+        - virl:
+            - ssh virl
+        - ns2:
+            - ssh ns2

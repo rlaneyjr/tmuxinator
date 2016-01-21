@@ -28,33 +28,10 @@ root: ~/
 # post: tmux -CC attach -t cloudmon
 
 windows:
-  - compute:
-      layout: even-vertical
+  - editor:
+      layout: main-vertical
       panes:
-        - compute02:
-            - ssh compute02
-        - compute03:
-            - ssh compute03
-  - controller01:
-      layout: even-horizontal
-      panes:
-        - controller01:
-            - ssh controller01
-        - network01:
-            - ssh network01
-  - store&switch:
-      layout: main-horizontal
-      panes:
-        - block01:
-            - ssh block01
-        - switch01:
-            - ssh sw1
-        - switch02:
-            - ssh sw2
-  - virl-ns2:
-      layout: even-vertical
-      panes:
-        - virl:
-            - ssh virl
-        - ns2:
-            - ssh ns2
+        - vim
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log

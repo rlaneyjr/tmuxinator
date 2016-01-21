@@ -32,17 +32,17 @@ windows:
       layout: even-vertical
       panes:
         - compute01:
-            - ssh rlaney@10.0.23.10
+            - ssh virl
             - sudo shutdown -h now
             - exit
             - x
         - compute02:
-            - ssh rlaney@10.0.23.20
+            - ssh compute02
             - sudo shutdown -h now
             - exit
             - x
         - compute03:
-            - ssh rlaney@10.0.23.30
+            - ssh compute03
             - sudo shutdown -h now
             - exit
             - x
@@ -50,17 +50,17 @@ windows:
       layout: even-vertical
       panes:
         - controller01:
-            - ssh rlaney@10.0.23.40
+            - ssh controller01
             - sudo shutdown -h now
             - exit
             - x
         - network01:
-            - ssh rlaney@10.0.23.60
+            - ssh network01
             - sudo shutdown -h now
             - exit
             - x
         - block01:
-            - ssh rlaney@10.0.23.50
+            - ssh block01
             - sudo shutdown -h now
             - exit
             - x
@@ -68,7 +68,7 @@ windows:
       layout: even-vertical
       panes:
         - cloudmon07:
-            - ssh rlaney@10.0.23.70
+            - ssh ns2
             - sudo shutdown -h now
             - exit
             - x

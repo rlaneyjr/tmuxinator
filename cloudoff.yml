@@ -39,11 +39,13 @@ windows:
         - compute02:
             - ssh compute02
             - sudo shutdown -h now
+            - ralrox22
             - exit
             - x
         - compute03:
             - ssh compute03
             - sudo shutdown -h now
+            - ralrox22
             - exit
             - x
   - ContNetBlock:
@@ -57,18 +59,27 @@ windows:
         - network01:
             - ssh network01
             - sudo shutdown -h now
+            - ralrox22
             - exit
             - x
         - block01:
             - ssh block01
             - sudo shutdown -h now
+            - ralrox22
             - exit
             - x
   - Other:
       layout: even-vertical
       panes:
-        - cloudmon07:
-            - ssh ns2
+        - cloudmon08:
+            - ssh 10.0.22.80
             - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
+        - cloudmon09:
+            - ssh 10.0.22.90
+            - sudo shutdown -h now
+            - ralrox22
             - exit
             - x

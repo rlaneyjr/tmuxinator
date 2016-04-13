@@ -37,12 +37,17 @@ windows:
             - exit
             - x
         - compute02:
-            - ssh compute02
+            - ssh com2
             - sudo shutdown -h now
             - exit
             - x
         - compute03:
-            - ssh compute03
+            - ssh com3
+            - sudo shutdown -h now
+            - exit
+            - x
+        - compute04:
+            - ssh com4
             - sudo shutdown -h now
             - exit
             - x
@@ -50,17 +55,12 @@ windows:
       layout: even-vertical
       panes:
         - controller01:
-            - ssh controller01
-            - sudo shutdown -h now
-            - exit
-            - x
-        - network01:
-            - ssh network01
+            - ssh con1
             - sudo shutdown -h now
             - exit
             - x
         - block01:
-            - ssh block01
+            - ssh blk1
             - sudo shutdown -h now
             - exit
             - x
@@ -70,12 +70,10 @@ windows:
         - cloudmon08:
             - ssh 10.0.22.80
             - sudo shutdown -h now
-            - ralrox22
             - exit
             - x
         - cloudmon09:
-            - ssh 10.0.22.90
+            - ssh ns1
             - sudo shutdown -h now
-            - ralrox22
             - exit
             - x

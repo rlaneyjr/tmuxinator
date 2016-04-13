@@ -31,13 +31,25 @@ windows:
   - controller01:
       layout: main-horizontal
       panes:
-        - ssh rlaney@10.0.23.40
-  - network:
-      layout: main-horizontal
+        - controller01:
+            - ssh controller01
+        - compute02:
+            - ssh compute02
+        - compute03:
+            - ssh compute03
+  - misc:
+      layout: even-horizontal
       panes:
         - network01:
-            - ssh rlaney@10.0.23.60
-        - switch01:
-            - ssh rlaney@10.0.22.1
-        - switch02:
-            - ssh rlaney@10.0.23.1
+            - ssh network01
+        - block01:
+            - ssh block01
+  - network:
+      layout: even-horizontal
+      panes:
+        - switch1:
+            - ssh sw1
+        - switch2:
+            - ssh sw2
+        - switch3:
+            - ssh sw3

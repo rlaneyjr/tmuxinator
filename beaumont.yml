@@ -1,0 +1,30 @@
+# ~/.tmuxinator/beaumont.yml
+
+name: beaumont
+root: ~/
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t beaumont
+
+windows:
+  - cores:
+      layout: even-horizontal
+      panes:
+        - bea-core-sw1:
+            - ssh rlaney@192.168.206.210
+            - ralrox22
+        - bea-core-sw2:
+            - ssh rlaney@192.168.206.211
+            - ralrox22
+  - switches:
+      layout: even-horizontal
+      panes:
+        - bea-circ-sw1:
+            - ssh rlaney@192.168.206.212
+            - ralrox22
+        - bea-edit-sw1:
+            - ssh rlaney@192.168.206.213
+            - ralrox22
+        - bea-exec-sw1:
+            - ssh rlaney@192.168.206.214
+            - ralrox22

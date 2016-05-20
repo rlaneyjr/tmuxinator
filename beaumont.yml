@@ -11,20 +11,15 @@ windows:
       layout: even-horizontal
       panes:
         - bea-core-sw1:
-            - ssh rlaney@192.168.206.210
-            - ralrox22
+            - ssh rlaney@10.185.6.33
         - bea-core-sw2:
-            - ssh rlaney@192.168.206.211
-            - ralrox22
+            - ssh rlaney@10.185.6.34
   - switches:
-      layout: even-horizontal
+      layout: even-vertical
       panes:
         - bea-circ-sw1:
-            - ssh rlaney@192.168.206.212
-            - ralrox22
+            - ssh rlaney@10.185.6.36
         - bea-edit-sw1:
-            - ssh rlaney@192.168.206.213
-            - ralrox22
+            - ssh rlaney@10.185.6.38
         - bea-exec-sw1:
-            - ssh rlaney@192.168.206.214
-            - ralrox22
+            - ssh rlaney@10.185.6.39

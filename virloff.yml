@@ -1,12 +1,12 @@
-# ~/.tmuxinator/cloudoff.yml
+# ~/.tmuxinator/virloff.yml
 
-name: cloudoff
+name: virloff
 root: ~/
 
 # Optional tmux socket
 # socket_name: foo
 
-# Runs before everything. Use it to start daeoffs etc.
+# Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
@@ -25,51 +25,28 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t cloudoff
+# post: tmux -CC attach -t virloff
 
 windows:
-  - compute:
-      layout: even-vertical
+  - controller:
+      layout: even-horizontal
       panes:
-#        - compute01:
-#            - ssh virl@10.0.23.10
-#            - VIRL
-#            - sudo shutdown -h now
-#            - exit
-#            - x
-#        - compute02:
-#            - ssh com2
-#            - sudo shutdown -h now
-#            - exit
-#            - x
-        - compute03:
-            - ssh com3
+        - virl:
+            - ssh virl
             - sudo shutdown -h now
             - exit
-            - x
-        - compute04:
-            - ssh com4
+        - compute1:
+            - ssh virl@10.0.23.11
             - sudo shutdown -h now
             - exit
-            - x
-  - ContNetBlock:
-      layout: even-vertical
+        - compute2:
+            - ssh virl@10.0.23.12
+            - sudo shutdown -h now
+            - exit
+  - ns2:
+      layout: even-horizontal
       panes:
-        - controller01:
-            - ssh con1
+        - ns1:
+            - ssh ns1
             - sudo shutdown -h now
             - exit
-            - x
-        - block01:
-            - ssh block01
-            - sudo shutdown -h now
-            - exit
-            - x
-#  - Other:
-#      layout: even-vertical
-#      panes:
-#        - cloudmon09:
-#            - ssh ns1
-#            - sudo shutdown -h now
-#            - exit
-#            - x

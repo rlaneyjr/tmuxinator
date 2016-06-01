@@ -28,17 +28,21 @@ root: ~/
 # post: tmux -CC attach -t net
 
 windows:
-  - firewalls:
-      layout: even-horizontal
+#  - firewalls:
+#      layout: even-horizontal
+#      panes:
+#        - tw-gw1:
+#            - ssh rlaney@192.168.22.1
+#        - tw-gw2:
+#            - ssh rlaney@10.0.25.1
+  - network:
+      layout: tiled
       panes:
-        - tw-gw1:
-            - ssh rlaney@192.168.22.1
-        - tw-gw2:
-            - ssh rlaney@10.0.25.1
-  - switches:
-      layout: even-horizontal
-      panes:
-        - switch01:
-            - ssh rlaney@10.0.22.1
-        - switch02:
-            - ssh rlaney@10.0.23.1
+        - het-remote01:
+          - ssh r1
+        - switch3:
+          - ssh sw3
+        - switch1:
+          - ssh sw1
+        - switch2:
+          - ssh sw2

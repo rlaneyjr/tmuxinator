@@ -1,0 +1,87 @@
+# ~/.tmuxinator/opssl.yml
+
+name: opssl
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_widow: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t opssl
+
+windows:
+  - batch1:
+      layout: even-vertical
+      panes:
+#        - het001chaopk001:
+#            - rsync -az dossl.sh root@172.19.12.210
+#            - ssh root@172.19.12.210
+        - het001houopk001:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.90.4.35
+            - ssh root@10.90.4.35
+        - het001nytopk001:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.171.8.30
+            - ssh root@10.171.8.30
+  - batch2:
+      layout: even-vertical
+      panes:
+        - het001sclopk005:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.70.0.37
+            - ssh root@10.70.0.37
+        - het001stropk005:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.72.0.37
+            - ssh root@10.72.0.37
+        - het044nmhopk001:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.192.1.75
+            - ssh root@10.192.1.75
+  - batch3:
+      layout: even-vertical
+      panes:
+        - het044sloopk001:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.196.8.75
+            - ssh root@10.196.8.75
+        - het044sloopk002:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.196.8.76
+            - ssh root@10.196.8.76
+        - het044sloopk005:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.196.8.137
+            - ssh root@10.196.8.137
+  - batch4:
+      layout: even-vertical
+      panes:
+        - DC4-opmantek01:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.72.0.30
+            - ssh root@10.72.0.30
+        - DC4-opmantek02:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.72.0.31
+            - ssh root@10.72.0.31
+        - het001sclopk004:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.70.0.34
+            - ssh root@10.70.0.34
+  - batch5:
+      layout: even-vertical
+      panes:
+        - het001stropk003:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.72.0.96
+            - ssh root@10.72.0.96
+        - het001stropk004:
+            - rsync -az ~/Projects/Opmantek/SSL/dossl.sh root@10.72.0.34
+            - ssh root@10.72.0.34

@@ -35,18 +35,18 @@ windows:
             - ssh virl
             - sudo shutdown -h now
             - exit
-        - compute1:
-            - ssh virl@10.0.23.11
-            - sudo shutdown -h now
-            - exit
-        - compute2:
-            - ssh virl@10.0.23.12
-            - sudo shutdown -h now
-            - exit
-  - ns2:
-      layout: even-horizontal
-      panes:
-        - ns1:
-            - ssh ns1
-            - sudo shutdown -h now
-            - exit
+#        - compute1:
+#            - ssh virl@10.0.23.11
+#            - sudo shutdown -h now
+#            - exit
+#        - compute2:
+#            - ssh virl@10.0.23.12
+#            - sudo shutdown -h now
+#            - exit
+#  - ns2:
+#      layout: even-horizontal
+#      panes:
+#        - ns1:
+#            - ssh ns1
+#            - sudo shutdown -h now
+#            - exit

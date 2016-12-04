@@ -29,7 +29,7 @@ root: ~/
 
 windows:
   - controller:
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - cont1:
             - ssh cont1
@@ -43,9 +43,9 @@ windows:
         - comp2:
             - ssh comp2
   - storage:
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - stor1:
             - ssh stor1
         - stor2:
-            - ssh stor1
+            - ssh stor2

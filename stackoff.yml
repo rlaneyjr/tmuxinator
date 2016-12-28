@@ -1,12 +1,12 @@
-# ~/.tmuxinator/stack.yml
+# ~/.tmuxinator/stackoff.yml
 
-name: stack
+name: stackoff
 root: ~/
 
 # Optional tmux socket
 # socket_name: foo
 
-# Runs before everything. Use it to start daemons etc.
+# Runs before everything. Use it to start daeoffs etc.
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
@@ -25,7 +25,7 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t stack
+# post: tmux -CC attach -t stackoff
 
 windows:
   - controller:
@@ -33,33 +33,83 @@ windows:
       panes:
         - imon1:
             - ssh imon1
-        - editor:
-            - vim
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
+        - imon4:
+            - ssh virl@imoniat04
+            - 
+            - sudo shutdown -h now
+            - VIRL
+            - exit
+            - x
   - compute:
       layout: even-vertical
       panes:
         - imon2:
             - ssh imon2
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
         - imon3:
             - ssh imon3
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
   - storage:
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - imon5:
             - ssh imon5
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
         - imon6:
             - ssh imon6
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
   - compute1:
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - imon7:
             - ssh imon7
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
         - imon8:
             - ssh imon8
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
   - compute2:
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - imon9:
             - ssh imon9
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x
         - imon10:
             - ssh imon10
+            - 
+            - sudo shutdown -h now
+            - ralrox22
+            - exit
+            - x

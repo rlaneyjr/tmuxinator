@@ -35,16 +35,16 @@ windows:
             - ssh imon1
             - 
             - sudo shutdown -h now
-            - ralrox22
-            - exit
-            - x
-        - imon4:
-            - ssh virl@imoniat04
             - 
-            - sudo shutdown -h now
-            - VIRL
             - exit
             - x
+#        - imon4:
+#            - ssh virl@imoniat04
+#            - 
+#            - sudo shutdown -h now
+#            - VIRL
+#            - exit
+#            - x
   - compute:
       layout: even-vertical
       panes:
@@ -52,14 +52,14 @@ windows:
             - ssh imon2
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
         - imon3:
             - ssh imon3
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
   - storage:
@@ -69,14 +69,14 @@ windows:
             - ssh imon5
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
         - imon6:
             - ssh imon6
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
   - compute1:
@@ -86,14 +86,14 @@ windows:
             - ssh imon7
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
         - imon8:
             - ssh imon8
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
   - compute2:
@@ -103,13 +103,13 @@ windows:
             - ssh imon9
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x
         - imon10:
             - ssh imon10
             - 
             - sudo shutdown -h now
-            - ralrox22
+            - 
             - exit
             - x

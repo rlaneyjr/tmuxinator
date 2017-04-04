@@ -28,13 +28,13 @@ root: ~/
 # post: tmux -CC attach -t stack
 
 windows:
-  - controller:
-      layout: even-horizontal
-      panes:
-        - imon1:
-            - ssh imon1
-        - editor:
-            - vim
+#  - controller:
+#      layout: even-horizontal
+#      panes:
+#        - imon1:
+#            - ssh imon1
+#        - editor:
+#            - vim
   - compute:
       layout: even-vertical
       panes:

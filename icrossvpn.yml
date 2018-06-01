@@ -1,0 +1,25 @@
+# ~/.tmuxinator/icrossvpn.yml
+
+name: icrossvpn
+root: ~/Dropbox (Personal)/MyDocs/WORK/TODO/iCrossing
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t beaumont
+
+windows:
+  - vpn:
+      layout: tiled
+      panes:
+        - iCrossing Reston:
+            - plink -1 -l admin -pw 1th311 10.196.62.2
+        - iCroossing LA:
+            - plink -1 -l admin -pw 1th311 10.118.6.5
+        - iCrossing Scottsdale:
+            - plink -1 -l admin -pw 1th311 10.13.63.9
+#        - iCrossing Sunguard:
+#            - plink -1 -l admin -pw 1th311 10.33.5.5
+  - editor:
+      panes:
+        - vim:
+            - vim iCrossing_Legacy_VPN.nfo
+

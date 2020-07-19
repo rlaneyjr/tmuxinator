@@ -1,6 +1,6 @@
-# ~/.tmuxinator/virlcluster.yml
+# ~/.tmuxinator/ie-auvik.yml
 
-name: virlcluster
+name: ie-auvik
 root: ~/
 
 # Optional tmux socket
@@ -25,21 +25,16 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t virlcluster
+# post: tmux -CC attach -t ie-auvik
 
+pre_window: workon ie-auvik-detector 
 windows:
-  - controller:
-      layout: even-horizontal
+  - code:
+      layout: main-vertical
       panes:
-        - virl:
-            - ssh virl
-  - compute1:
-      layout: even-horizontal
+        - ranger
+  - scratch:
+      layout: main-vertical
       panes:
-        - compute1:
-            - ssh cp1
-  - compute2:
-      layout: even-horizontal
-      panes:
-        - compute2:
-            - ssh cp2
+        - vim scratch.py
+        - ipy

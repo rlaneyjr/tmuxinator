@@ -1,6 +1,6 @@
-# ~/.tmuxinator/testTmux.yml
+# ~/.tmuxinator/nettopo.yml
 
-name: testTmux
+name: nettopo
 root: ~/
 
 # Optional tmux socket
@@ -25,13 +25,15 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t testTmux
+# post: tmux -CC attach -t nettopo
 
 windows:
-  - editor:
+  - code:
       layout: main-vertical
       panes:
-        - zsh
-        - vim
-  - server: bundle exec
-  - logs: tail -f log/testTmux.log
+        - workon nettopo && ranger
+  - scratch:
+      layout: main-vertical
+      panes:
+        - workon nettopo && vim scratch.py
+        - workon nettopo && ipython
